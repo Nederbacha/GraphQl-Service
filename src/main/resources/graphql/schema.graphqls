@@ -12,6 +12,7 @@ type Mutation {
     updateProduct(id : String, product : ProductRequestDTO) : Product
 }
 
+
 type Product {
 
       id : String

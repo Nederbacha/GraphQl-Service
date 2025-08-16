@@ -18,6 +18,7 @@ import java.util.UUID;
 public class GraphQlServiceApplication {
 
 
+
     public static void main(String[] args) {
         SpringApplication.run(GraphQlServiceApplication.class, args);
         System.out.println("################################################################################");

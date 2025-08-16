@@ -23,6 +23,7 @@ public List<Category> getAllCategories(){
 }
 
 
+
 @QueryMapping
 public Category findByIdCategory(@Argument Long id){
         return categoryRepository.findById(id).orElseThrow(()-> new RuntimeException(String.format("this category %s is not found",id)));

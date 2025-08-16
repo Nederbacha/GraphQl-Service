@@ -17,6 +17,7 @@ public class LigneCommande implements Serializable {
     private Long id;
     private int quantity;
 
+
     @ManyToOne
     @JoinColumn(name = "id_Product",nullable = false)
     private Product product;

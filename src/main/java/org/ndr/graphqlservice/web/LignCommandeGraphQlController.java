@@ -25,6 +25,7 @@ public class LignCommandeGraphQlController {
     }
 
 
+
     @QueryMapping
     public LigneCommande findByIdLignCommande(@Argument Long id){
         return  lignCommandeRepository.findById(id).orElseThrow(()-> new RuntimeException(String.format("this ligne commande %s is not existed",id)));

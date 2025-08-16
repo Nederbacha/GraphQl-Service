@@ -73,6 +73,7 @@ public class ProductGraphQlController {
     }
 
 
+
     @MutationMapping
     public Product updateProduct(@Argument String id, @Argument ProductRequestDTO product){
         Category category=categoryRepository.findById(product.id_category()).orElse(null);
