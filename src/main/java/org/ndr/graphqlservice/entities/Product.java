@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
@@ -19,4 +20,6 @@ public class Product {
     private int quantity;
     @ManyToOne
     private Category category;
+    @OneToMany(mappedBy = "product")
+    private List<LigneCommande> ligneCommandes;
 }

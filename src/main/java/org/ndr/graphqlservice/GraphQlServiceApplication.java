@@ -1,5 +1,6 @@
 package org.ndr.graphqlservice;
 
+import org.modelmapper.ModelMapper;
 import org.ndr.graphqlservice.entities.Category;
 import org.ndr.graphqlservice.entities.Product;
 import org.ndr.graphqlservice.repository.CategoryRepository;
@@ -60,9 +61,10 @@ categoryRepository.findAll().forEach(category->{
         };
     }
 
-
-
-
+    @Bean
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
+    }
 
 
 
@@ -118,3 +120,6 @@ categoryRepository.findAll().forEach(category->{
 
 
 }
+
+
+

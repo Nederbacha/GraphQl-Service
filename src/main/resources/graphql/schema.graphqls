@@ -1,6 +1,15 @@
 type Query {
     findAllProduct : [Product],
-    findByIdProduct(id : String) : Product
+    findByIdProduct(id : String) : Product,
+    getAllCategories : [Category],
+    findByIdCategory(id :Float): Category
+    getAllLigneCommande : [LigneCommande]
+
+}
+
+type Mutation {
+    saveProduct(product : ProductRequestDTO) : Product,
+    updateProduct(id : String, product : ProductRequestDTO) : Product
 }
 
 type Product {
@@ -14,4 +23,16 @@ type Product {
 type Category {
      id : Float
      name :String
+    products : [Product]
+}
+ type LigneCommande {
+     id : Float,
+     quantity : Int
+ }
+input ProductRequestDTO {
+    name : String
+    price : Float
+    quantity : Int
+    id_category: Float
+
 }
